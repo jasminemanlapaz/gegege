@@ -14,11 +14,11 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
+    <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-        <a href="{{ route('employee.create') }}" class="btn btn-info">Add New Employee</a>
-        <div class="row">
-
+        <!--<a href="{{ route('employee.create') }}" class="btn btn-info">Add New Employee</a> -->
+       
        
                 <div class="card-head">
                      
@@ -43,23 +43,23 @@
                         </thead>
 
                         <tbody  >
-                            @foreach ($employees)
+                            @foreach ($employees as $items)
                             <tr>
                                 
-                                <td class="">{{$items}}</td>
-                                <td>{{$items}}</td>
-                                <td>{{$items}}</td>
-                                <td>{{$items}}</td>
-                                <td>{{$items}}</td>
-                                <td>{{$items}}</td>
-                                <td>{{$items}}</td>
-                                {{-- <td> 
-                                    <span class="badge bg-success"><a href="{{  route('employee.edit')}}" class="btn btn-success mx-3  "><h5>Edit</h5></a></span>
+                                <td class="">{{$items->id}}</td>
+                                <td>{{$items->fname}}</td>
+                                <td>{{$items->lname}}</td>
+                                <td>{{$items->midname}}</td>
+                                <td>{{$items->age}}</td>
+                                <td>{{$items->address}}</td>
+                                <td>{{$items->zip}}</td>
+                                <td> 
+                                    <span class="badge bg-success"><a href="{{  route('employee.edit',$items->id)}}" class="btn btn-success mx-3  "><h5>Edit</h5></a></span>
                                 </td>
                                 <td> 
                                     
-                                <span class="badge bg-danger"><a href="{{  route('employee.delete')}}" class="m-3 p-lg-5"><h5>Delete</h5></a></span>
-                                </td> --}}
+                                <span class="badge bg-danger"><a href="{{  route('employee.delete',$items->id)}}" class="m-3 p-lg-5"><h5>Delete</h5></a></span>
+                                </td>
                                 
                             </tr>
                             @endforeach
