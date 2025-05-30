@@ -22,7 +22,7 @@
                         <div class="card-body">
                             <p class="card-text">
 <<<<<<< HEAD
-                                <h2>hello world</h2>
+                                <h2>hello jazz</h2>
 =======
                                 {{ __('You are logged in!') }}
 >>>>>>> 7887493fcf7786f22e7fa54dad3031e01a738e79
